@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(jong-marshes-79mNMAvSORg-unsplash\ \(3\).jpg); /* Caminho para a sua imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 55px auto;
+            background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para destacar o formulário */
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 35px;
+        }
+
+        .form-group .enter-link {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 35px;
+            cursor: pointer;
+        }
+        .form-group .enter-link:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha">
+            </div>
+            <div class="form-group">
+                <a class="enter-link" id="loginBtn">Entrar</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            const storedEmail = localStorage.getItem('email');
+            const storedSenha = localStorage.getItem('senha');
+
+            if (email === storedEmail && senha === storedSenha) {
+                alert('Login bem-sucedido!');
+                window.location.href = 'AguaSaneamento.html';
+            } else {
+                alert('Email ou senha incorretos.');
+            }
+        });
+
+        window.onload = function() {
+            const storedEmail = localStorage.getItem('email');
+            if (storedEmail) {
+                document.getElementById('email').value = storedEmail;
+            }
+        };
+    </script>
+</body>
+</html>

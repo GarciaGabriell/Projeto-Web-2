@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center {
+    max-width: 1100px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgba(79, 155, 243, 0.473);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    color: #fff;
+    font-size: x-large;
+}
+
+.menu-container {
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+.menu-container .menu {
+    flex: auto; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.texto-sobre-imagens {
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    top: 80px; /* Ajuste a distância do topo conforme necessário */
+    z-index: 1; /* Garante que o texto esteja acima das imagens */
+}
+
+
+.texto-sobre-imagens p{
+    background-color: rgba(50, 29, 240, 0.678);
+    border: 4px solid white;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    text-shadow: 1px 1px 1px black; /* Sombra para as letras */
+}
+
+.menu-container a {
+    color: white;
+    margin: 0 10px; /* Ajuste o espaçamento entre os links conforme necessário */
+    padding: 0 10px; /* Ajuste o espaçamento dentro dos links conforme necessário */
+    text-decoration: none;
+    line-height: 40px;
+    transition: color 0.8s;
+    font-size: x-large;
+}
+.menu-container a:hover {
+    color: rgb(5, 68, 161);
+} 
+section.main {
+    min-height: 1200px;
+    background-image: url('../jong-marshes-79mNMAvSORg-unsplash (3).jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.text-chamada {
+    left: 20px;
+    color: white;
+    background-color: blue; /* Fundo azul */
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid white; /* Borda branca */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+.text-chamada h1 {
+    font-size: x-large;
+    text-shadow: 1px 1px 1px black;
+}
+
+.text-chamada h3 {
+    font-size: large;
+    text-shadow: 1px 1px 1px    black;
+}
+
+section.informacoes {
+    background-color: rgb(79, 142, 214);
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.informacoes h3 {
+    background-color: blue;
+    border: 4px solid white;
+    padding: 8px;
+    text-align: center;
+}
+
+.informacoes p {
+    background-color: white;
+    color: black;
+    padding: 8px;
+}
+
+.informacao-single img {
+    width: 100%;
+}
+
+.informacao-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.informacao-single img {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.informacao-container {
+    max-width: 1100px;
+}
+
+.imagens-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 160px; /* Ajuste a distância entre o texto e as imagens */
+    padding: 15px;
+    position: relative; /* Permite que o espaço seja respeitado pelo texto sobre as imagens */
+}
+
+
+.imagens-container img {
+    width: 30%;
+    max-width: 30%;
+    height: auto;
+}
+
+.informacao-single img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.informacoes .informacao-single img {
+    max-width: 100%;
+    height: auto;
+    max-height: 650px; /* Defina a altura máxima desejada */
+}
+
+.informacao-container {
+    max-width: 1100px;
+}
+
+.informacoes {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.informacoes h3 {
+    margin-bottom: 20px;
+}
+
+.informacoes p {
+    margin-bottom: 40px;
+}
